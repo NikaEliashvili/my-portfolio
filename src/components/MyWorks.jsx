@@ -7,7 +7,6 @@ export default function MyWorks() {
   // const [isSeeMore, setIsSeeMore] = React.useState(true);
   const [appAmount, setAppAmount] = React.useState(8);
   const getData = data.slice(0, appAmount);
-  console.log("appAmount: ", appAmount);
   function seeMore() {
     if (appAmount >= data.length) {
       setAppAmount(8);

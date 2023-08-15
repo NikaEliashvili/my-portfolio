@@ -486,7 +486,7 @@ header {
   background: #14116e;
   border-radius: 0.5rem;
   overflow: hidden;
-  animation: popup-anim 1s ease-out 0s alternate 1;
+  animation: popup-anim 0.5s ease-out 0s alternate 1;
 
 }
 
@@ -604,17 +604,16 @@ header {
   display: flex;
   border-radius: 50%;
   z-index: 3;
-
+  box-shadow: 0 0 20px rgba(43, 165, 226, 0.5);
+  animation: heartbeat 1s ease-out 0s alternate infinite;
 }
 
 .upicon {
   background-color: #ffffff;
   color: rgb(6, 77, 143);
   font-size: 3rem;
-  box-shadow: 0 0 20px rgba(43, 165, 226, 0.5);
   border: 2px solid #2ba5e2;
   border-radius: 50%;
-  animation: heartbeat 1s ease-out 0s alternate infinite;
 }
 
 @keyframes heartbeat {
