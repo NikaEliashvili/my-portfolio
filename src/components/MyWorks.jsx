@@ -24,7 +24,7 @@ export default function MyWorks() {
       <Link key={id} to={`${id}`} id={`work-${id}`}>
         <div key={id} className="portfolio__item">
           <img
-            src={`../../public/images/${imgurl}`}
+            src={`../../images/${imgurl}`}
             alt={title}
             className="portfolio__img"
           />

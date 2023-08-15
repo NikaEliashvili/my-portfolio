@@ -23,11 +23,7 @@ export default function EachWork() {
         </h1>
         <p className="section__subtitle section__subtitle--intro">{tools}</p>
 
-        <img
-          src={`../../public/images/${imgurl}`}
-          alt=""
-          className="intro__img"
-        />
+        <img src={`../../images/${imgurl}`} alt="" className="intro__img" />
       </section>
       <div className="portfolio-item-individual">
         <div>
