@@ -519,6 +519,7 @@ header {
   font-weight: 300;
   letter-spacing: 1px;
   transition: 0.4s;
+  color: white
 }
 
 .loadmore-btn:hover {
