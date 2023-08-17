@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaGithub, FaEye } from "react-icons/fa6";
 import ScrollUp from "../components/ScrollUp";
@@ -10,10 +10,11 @@ export default function EachWork() {
   const appId = parseInt(params.id);
   const app = data.filter((app) => app.id === appId);
   const { id, title, imgurl, link, description, giturl, tools } = app[0];
-
+  const location = useLocation();
+  const appAmount = location?.state?.appAmount;
   return (
     <>
-      <HashLink to={`..#work-${id}`} className="backLink">
+      <HashLink to={`..#work-${id}`} className="backLink" state={{ appAmount }}>
         &larr; Back to All Apps
       </HashLink>
       <section className="intro portfolio-intro">
