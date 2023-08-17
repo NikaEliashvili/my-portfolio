@@ -157,7 +157,7 @@ export default [
   {
     id: id(),
     title: "Home Town",
-    imgurl: "hometown.png",
+    imgurl: "Hometown.png",
     link: "https://minehometown.netlify.app/",
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
@@ -167,7 +167,7 @@ export default [
   {
     id: id(),
     title: "Oldagram",
-    imgurl: "oldagram-square-min.png",
+    imgurl: "oldagram-min.png",
     link: "https://oldagramapp.netlify.app/",
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
