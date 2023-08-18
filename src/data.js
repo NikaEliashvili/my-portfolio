@@ -106,6 +106,16 @@ export default [
   },
   {
     id: id(),
+    title: "Flappy Bird",
+    imgurl: "flappy-bird.png",
+    link: "https://movie-watchlistapp.netlify.app/",
+    description:
+      "Here you can see any movies and save them into a watchlist. This app uses API to fetch movies. It was built as a part of the Scrimba Frontend Developer Career Path.",
+    giturl: "https://github.com/NikaEliashvili/movie-watchlist",
+    tools: "Vanilla JS & API",
+  },
+  {
+    id: id(),
     title: "Generator",
     imgurl: "password-generator-min.png",
     link: "https://random-passwords-generatorapp.netlify.app/",
