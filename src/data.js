@@ -110,9 +110,9 @@ export default [
     imgurl: "flappy-bird.png",
     link: "https://movie-watchlistapp.netlify.app/",
     description:
-      "Here you can see any movies and save them into a watchlist. This app uses API to fetch movies. It was built as a part of the Scrimba Frontend Developer Career Path.",
+      "It is a small flappy bird game. Built with HTML, CSS and JavaScript. Keep in mind this is not responsive for mobile phones. ",
     giturl: "https://github.com/NikaEliashvili/movie-watchlist",
-    tools: "Vanilla JS & API",
+    tools: "Vanilla JS",
   },
   {
     id: id(),
