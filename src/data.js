@@ -16,6 +16,15 @@ export default [
   },
   {
     id: id(),
+    title: "Pokemon",
+    imgurl: "Pokemon.png",
+    link: "https://pokemon-react-ts.netlify.app/",
+    description: `This App is simple Pokemon app where you can find pokemons and user searchbar for better experience. It is built using React-TS and tailwind. Here is showcase of using React hooks suck as useEffect, useMemo, useRef, useCallback and others.`,
+    giturl: "https://github.com/NikaEliashvili/Pokemon",
+    tools: "TypeScript, React & TailWind",
+  },
+  {
+    id: id(),
     title: "Quizzical",
     imgurl: "Quizzical-min.png",
     link: "https://quizzical-react-app-withapi.netlify.app/",
