@@ -26,6 +26,7 @@ a {
 
 a:hover {
   color: #535bf2;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -198,6 +199,7 @@ header {
   position: absolute;
   top: 1.4rem;
   right: 4rem;
+  z-index: +1;
 }
 
 .nav__list.onClick {
