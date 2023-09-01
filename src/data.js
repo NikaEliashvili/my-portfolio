@@ -16,7 +16,7 @@ export default [
   },
   {
     id: id(),
-    title: "Markdown Editor",
+    title: "Markdown ",
     imgurl: "markdown-previewer.png",
     link: "https://markdown-editor-previewer.netlify.app/",
     description: `It is a React project. here you can type any text and transform them in specific styles. make them bold, italic and other unique styles.`,
@@ -25,7 +25,7 @@ export default [
   },
   {
     id: id(),
-    title: "Quote Machine",
+    title: "Random Quotes",
     imgurl: "quote-machine.png",
     link: "https://quote-machine-app.netlify.app/",
     description: `this app is built by React. Here you can find random quotes about learning and share them on Twitter or Tumblr`,
