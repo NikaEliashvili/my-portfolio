@@ -16,6 +16,26 @@ export default [
   },
   {
     id: id(),
+    title: "Quizzical",
+    imgurl: "Quizzical-min.png",
+    link: "https://quizzical-react-app-withapi.netlify.app/",
+    description:
+      "In this app, the user can choose the amount, category and difficulty of questions and then the user is free to play the quiz. This app is built in HTML5, CSS And ReactJS. It uses API to get any type of question. It was built as a part of Scrimba's Frontend Developer Career Path.",
+    giturl: "https://github.com/NikaEliashvili/Quizzical/tree/main",
+    tools: "React & CSS",
+  },
+  {
+    id: id(),
+    title: "Drum Machine",
+    imgurl: "drum-machine.png",
+    link: "https://drum-pad-machine.netlify.app/",
+    description:
+      "You can play around with drum pads and make some sounds. you can either click on buttons or use your keyboard appropriate to pad letters. It is built by React.",
+    giturl: "https://github.com/NikaEliashvili/drum-machine",
+    tools: "ReactJS",
+  },
+  {
+    id: id(),
     title: "Markdown ",
     imgurl: "markdown-previewer.png",
     link: "https://markdown-editor-previewer.netlify.app/",
@@ -40,16 +60,6 @@ export default [
     description: `This App is simple Pokemon app where you can find pokemons and user searchbar for better experience. It is built using React-TS and tailwind. Here is showcase of using React hooks suck as useEffect, useMemo, useRef, useCallback and others.`,
     giturl: "https://github.com/NikaEliashvili/Pokemon",
     tools: "TypeScript, React & TailWind",
-  },
-  {
-    id: id(),
-    title: "Quizzical",
-    imgurl: "Quizzical-min.png",
-    link: "https://quizzical-react-app-withapi.netlify.app/",
-    description:
-      "In this app, the user can choose the amount, category and difficulty of questions and then the user is free to play the quiz. This app is built in HTML5, CSS And ReactJS. It uses API to get any type of question. It was built as a part of Scrimba's Frontend Developer Career Path.",
-    giturl: "https://github.com/NikaEliashvili/Quizzical/tree/main",
-    tools: "React & CSS",
   },
   {
     id: id(),
