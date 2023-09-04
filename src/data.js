@@ -36,12 +36,13 @@ export default [
   },
   {
     id: id(),
-    title: "Markdown ",
-    imgurl: "markdown-previewer.png",
-    link: "https://markdown-editor-previewer.netlify.app/",
-    description: `It is a React project. here you can type any text and transform them in specific styles. make them bold, italic and other unique styles.`,
-    giturl: "https://github.com/NikaEliashvili/markdown-previewer",
-    tools: "React & CSS",
+    title: "Calculator",
+    imgurl: "calculator.png",
+    link: "https://calculator-app-byreact.netlify.app/",
+    description:
+      "It is basic calculator created by React. it's allows you to make calculations with mouse clicks. ",
+    giturl: "https://github.com/NikaEliashvili/calculator",
+    tools: "ReactJS",
   },
   {
     id: id(),
@@ -70,6 +71,15 @@ export default [
       "Website About Social Services for the hackathon project built with PHP, MySql and vanilla JS. It was my first touch with a real project using PHP and MySQL. I had a great experience.",
     giturl: "https://github.com/NikaEliashvili/Hackathon-Project",
     tools: "PHP & MySQL",
+  },
+  {
+    id: id(),
+    title: "Markdown ",
+    imgurl: "markdown-previewer.png",
+    link: "https://markdown-editor-previewer.netlify.app/",
+    description: `It is a React project. here you can type any text and transform them in specific styles. make them bold, italic and other unique styles.`,
+    giturl: "https://github.com/NikaEliashvili/markdown-previewer",
+    tools: "React & CSS",
   },
   {
     id: id(),
