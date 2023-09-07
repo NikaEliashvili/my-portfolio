@@ -6,6 +6,16 @@ function id() {
 export default [
   {
     id: id(),
+    title: "Social Services",
+    imgurl: "social-services.png",
+    link: "http://socialserviceproject.infinityfreeapp.com/",
+    description:
+      "Website About Social Services for the hackathon project built with PHP, MySql and vanilla JS. It was my first touch with a real project using PHP and MySQL. I had a great experience.",
+    giturl: "https://github.com/NikaEliashvili/Hackathon-Project",
+    tools: "PHP & MySQL",
+  },
+  {
+    id: id(),
     title: "VANLIFE",
     imgurl: "vanlife-min.png",
     link: "https://vanlife-reactapp.netlify.app/",
@@ -55,22 +65,21 @@ export default [
   },
   {
     id: id(),
+    title: "Pomodoro Clock",
+    imgurl: "pomodoro.png",
+    link: "https://pomodoro-clock-byreact.netlify.app/",
+    description: `This is Pomodoro Clock, which allows users to use their time better. Main idea is that you can turn on timer and control it. It is built by ReactJS.`,
+    giturl: "https://github.com/NikaEliashvili/pomodoro-clock",
+    tools: "TypeScript, React & TailWind",
+  },
+  {
+    id: id(),
     title: "Pokemon",
     imgurl: "Pokemon.png",
     link: "https://pokemon-react-ts.netlify.app/",
     description: `This App is simple Pokemon app where you can find pokemons and user searchbar for better experience. It is built using React-TS and tailwind. Here is showcase of using React hooks suck as useEffect, useMemo, useRef, useCallback and others.`,
     giturl: "https://github.com/NikaEliashvili/Pokemon",
     tools: "TypeScript, React & TailWind",
-  },
-  {
-    id: id(),
-    title: "Social Services",
-    imgurl: "social-services.png",
-    link: "http://socialserviceproject.infinityfreeapp.com/",
-    description:
-      "Website About Social Services for the hackathon project built with PHP, MySql and vanilla JS. It was my first touch with a real project using PHP and MySQL. I had a great experience.",
-    giturl: "https://github.com/NikaEliashvili/Hackathon-Project",
-    tools: "PHP & MySQL",
   },
   {
     id: id(),
