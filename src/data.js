@@ -16,6 +16,16 @@ export default [
   },
   {
     id: id(),
+    title: "Movie App",
+    imgurl: "movie-app.png",
+    link: "https://movieapp-themoviedb.netlify.app/",
+    description:
+      "It is one of my biggest projects in React. I used React, React-router, Tailwindcss and The Movie Database (themoviedb.org) API. This app is responsive for all devices. Users can add movies to the Watchlist and see later them. Favourited movies are saved by localStorage in the browser. ",
+    giturl: "https://github.com/NikaEliashvili/movie-app",
+    tools: "React & TailWind & API",
+  },
+  {
+    id: id(),
     title: "VANLIFE",
     imgurl: "vanlife-min.png",
     link: "https://vanlife-reactapp.netlify.app/",
