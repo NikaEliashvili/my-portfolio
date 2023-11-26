@@ -174,10 +174,10 @@ export default [
     id: id(),
     title: "Flappy Bird",
     imgurl: "flappy-bird.png",
-    link: "https://movie-watchlistapp.netlify.app/",
+    link: "https://flappy-birdjs.netlify.app/",
     description:
       "It is a small flappy bird game. Built with HTML, CSS and JavaScript. Keep in mind this is not responsive for mobile phones. ",
-    giturl: "https://github.com/NikaEliashvili/movie-watchlist",
+    giturl: "https://github.com/NikaEliashvili/Flappy-Bird",
     tools: "Vanilla JS",
   },
   {
