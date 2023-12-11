@@ -540,7 +540,22 @@ header {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.portfolio-item-individual .description a {
+  background: none;
+  padding: 0;
+  color: #14116e;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  display: inline;
+  width: 100%;
+  cursor: pointer;
+}
 
+.portfolio-item-individual .description a:hover {
+  background: transparent;
+  color: blue;
+}
 
 /* Individual portfolio item styles */
 

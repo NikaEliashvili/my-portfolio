@@ -46,7 +46,10 @@ export default function EachWork() {
             <FaEye /> Live version
           </a>
         </div>
-        <p dangerouslySetInnerHTML={description} />
+        <p
+          className="description"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
       <ScrollUp />
     </>
