@@ -16,6 +16,18 @@ export default [
   },
   {
     id: id(),
+    title: "Taskify",
+    imgurl: "Taskify.png",
+    link: "https://taskify-trello-clone.vercel.app/",
+    description: `It is a full-stack Trello Clone app built with Next.js 14, Server Actions, React, Prisma, Stripe, Tailwind, and MySQL.
+
+      Credit: https://www.youtube.com/watch?v=pRybm9lXW2c&t=426s&ab_channel=CodeWithAntonio
+      `,
+    giturl: "https://github.com/NikaEliashvili/Taskify-Trello-Clone",
+    tools: "NextJS & MySQL & tailwind",
+  },
+  {
+    id: id(),
     title: "Movie App",
     imgurl: "movie-app.png",
     link: "https://movieapp-themoviedb.netlify.app/",
