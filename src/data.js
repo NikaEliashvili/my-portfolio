@@ -24,7 +24,7 @@ export default [
       Credit: https://www.youtube.com/watch?v=pRybm9lXW2c&t=426s&ab_channel=CodeWithAntonio
       `,
     giturl: "https://github.com/NikaEliashvili/Taskify-Trello-Clone",
-    tools: "NextJS & MySQL & tailwind",
+    tools: "NextJS & MySQL",
   },
   {
     id: id(),
