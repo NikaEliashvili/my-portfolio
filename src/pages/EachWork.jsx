@@ -9,12 +9,17 @@ export default function EachWork() {
   const params = useParams();
   const appId = parseInt(params.id);
   const app = data.filter((app) => app.id === appId);
-  const { id, title, imgurl, link, description, giturl, tools } = app[0];
+  const { id, title, imgurl, link, description, giturl, tools } =
+    app[0];
   const location = useLocation();
   const appAmount = location?.state?.appAmount;
   return (
     <>
-      <HashLink to={`..#work-${id}`} className="backLink" state={{ appAmount }}>
+      <HashLink
+        to={`..#work-${id}`}
+        className="backLink"
+        state={{ appAmount }}
+      >
         &larr; Back to All Apps
       </HashLink>
       <section className="intro portfolio-intro">
@@ -22,9 +27,15 @@ export default function EachWork() {
           {title}
           <strong>web app</strong>
         </h1>
-        <p className="section__subtitle section__subtitle--intro">{tools}</p>
+        <p className="section__subtitle section__subtitle--intro">
+          {tools}
+        </p>
 
-        <img src={`../../images/${imgurl}`} alt="" className="intro__img" />
+        <img
+          src={`../../images/${imgurl}`}
+          alt=""
+          className="intro__img"
+        />
       </section>
       <div className="portfolio-item-individual">
         <div>
@@ -35,7 +46,7 @@ export default function EachWork() {
             <FaEye /> Live version
           </a>
         </div>
-        <p>{description} </p>
+        <p dangerouslySetInnerHTML={description} />
       </div>
       <ScrollUp />
     </>
