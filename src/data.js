@@ -27,6 +27,16 @@ export default [
   },
   {
     id: id(),
+    title: "Crud App",
+    imgurl: "crud-project.png",
+    link: "https://students-crud-firebase.vercel.app/",
+    description:
+      "Crud project built with Angular 16 and Google Firebase Authentication & Cloud Firestore. Users can register and login after link verification. Then a user can add new students, update any of them or delete them. I think this project is a great showcase for my knowledge in Angular and front-end development. ",
+    giturl: "https://github.com/NikaEliashvili/Crud-Firebase",
+    tools: "Angular & Firebase",
+  },
+  {
+    id: id(),
     title: "Movie App",
     imgurl: "movie-app.png",
     link: "https://movieapp-themoviedb.netlify.app/",
@@ -40,7 +50,7 @@ export default [
     title: "VANLIFE",
     imgurl: "vanlife-min.png",
     link: "https://vanlife-reactapp.netlify.app/",
-    description: `It is one of the best projects in React. Multipage app created with React-Router-6. Users can look through all available vans or become a user and start hiring them vans. It was built as a part of Scrimba's Frontend Developer Career Path.
+    description: `Multipage app created with React-Router-6. Users can look through all available vans or become a user and start hiring them vans. It was built as a part of Scrimba's Frontend Developer Career Path.
     \n PS: for user experience please use this Login: b@b.com and Password: p123.`,
     giturl: "https://github.com/NikaEliashvili/VANLIFE",
     tools: "React & CSS",
