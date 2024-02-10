@@ -3,7 +3,9 @@ import { HashLink } from "react-router-hash-link";
 import { LuMenu } from "react-icons/lu";
 import { FaXmark } from "react-icons/fa6";
 export default function Header() {
-  const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = React.useState(
+    window.innerWidth
+  );
   const [isMenuOn, setMenuOn] = React.useState(false);
   const [isClickedBtn, setIsClickedBtn] = React.useState(false);
   if (windowWidth > 650 && isMenuOn) {
@@ -47,17 +49,17 @@ export default function Header() {
             </li>
             <li className="nav__item">
               <HashLink to="/#services" className="nav__link">
-                My Services
+                Services
               </HashLink>
             </li>
             <li className="nav__item">
               <HashLink to="/#about" className="nav__link">
-                About me
+                About
               </HashLink>
             </li>
             <li className="nav__item">
               <HashLink to="/#work" className="nav__link">
-                My Projects
+                Projects
               </HashLink>
             </li>
           </ul>
@@ -73,17 +75,17 @@ export default function Header() {
               </li>
               <li className="nav__item">
                 <HashLink to="/#services" className="nav__link">
-                  My Services
+                  Services
                 </HashLink>
               </li>
               <li className="nav__item">
                 <HashLink to="/#about" className="nav__link">
-                  About me
+                  About
                 </HashLink>
               </li>
               <li className="nav__item">
                 <HashLink to="#work" className="nav__link">
-                  My Projects
+                  Projects
                 </HashLink>
               </li>
             </ul>

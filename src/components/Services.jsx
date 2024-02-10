@@ -10,11 +10,14 @@ export default function Services() {
         <div className="service">
           <h3>Development</h3>
           <p>
-            I am a versatile front-end developer. I have a solid grip
-            on the fundamentals of web development using HTML, CSS,
-            JavaScript with library - ReactJS and framework - Angular.
-            I have knowledge with CSS frameworks like Bootsrap,
-            TailwindCSS and AntDesign.
+            Welcome to the forefront of innovation! With mastery in
+            ReactJS, AngularJS, TailwindCSS, Bootstrap, AntDesign,
+            Google Firebase, and more, I craft seamless digital
+            experiences. From sleek websites to dynamic web
+            applications, I transform visions into reality. Elevate
+            your online presence with cutting-edge design, flawless
+            functionality, and unparalleled user experiences. Let's
+            build your digital future together.
           </p>
         </div>
         <div className="service">

@@ -21,8 +21,8 @@ export default function MyWorks() {
 
   const isSeeMore = appAmount >= data.length ? false : true;
 
-  const portElements = getData.map((app) => {
-    const { id, imgurl, title } = app;
+  const portElements = getData.map((project) => {
+    const { id, imgurl, title, tools } = project;
     return (
       <Link
         key={id}
@@ -30,13 +30,29 @@ export default function MyWorks() {
         id={`work-${id}`}
         state={{ appAmount }}
       >
-        <div key={id} className="portfolio__item">
-          <img
-            src={`/images/${imgurl}`}
-            alt={title}
-            className="portfolio__img"
-          />
-        </div>
+        <dfn>
+          <abbr title="Click to see more...">
+            <div className="portfolio__item__card">
+              <div className="portfolio__item__header__container">
+                <h3 className="portfolio__item__header">{title}</h3>
+                <div className="portfolio__item__tools">
+                  {tools.split("&").map((skill) => (
+                    <span key={skill} className="tool">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div key={id} className="portfolio__item">
+                <img
+                  src={`/images/${imgurl}`}
+                  alt={title}
+                  className="portfolio__img"
+                />
+              </div>
+            </div>
+          </abbr>
+        </dfn>
       </Link>
     );
   });
