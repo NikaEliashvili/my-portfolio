@@ -32,7 +32,7 @@ export default function EachWork() {
         </p>
 
         <img
-          src={`../../images/${imgurl}`}
+          src={`/images/${imgurl}`}
           alt=""
           className="intro__img"
         />
