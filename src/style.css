@@ -649,6 +649,8 @@ abbr[title] {
 
 
 .search_bar {
+  max-width: 1200px;
+  margin: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
