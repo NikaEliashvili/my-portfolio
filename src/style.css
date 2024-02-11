@@ -517,6 +517,8 @@ header {
 }
 
 .portfolio__item__card {
+  margin: 0 auto;
+  max-width: 400px;
   background: #303030;
   border-radius: 0.5rem;
   height: 320px;
