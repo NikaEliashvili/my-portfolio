@@ -1,27 +1,76 @@
-import React, { useId } from "react";
+import React, { useId, useState } from "react";
+import { MdClear } from "react-icons/md";
 import data from "../data.js";
 
 import { Link, useLocation } from "react-router-dom";
 
 export default function MyWorks() {
-  // const [isSeeMore, setIsSeeMore] = React.useState(true);
   const location = useLocation();
   const stateAppAmount = location?.state?.appAmount;
   const [appAmount, setAppAmount] = React.useState(
     stateAppAmount || 8
   );
-  const getData = data.slice(0, appAmount);
+
+  const [filters, setFilters] = useState([
+    { filterName: "React", isActive: false },
+    { filterName: "Angular", isActive: false },
+    { filterName: "VanillaJS", isActive: false },
+    { filterName: "Firebase", isActive: false },
+    { filterName: "PHP", isActive: false },
+    { filterName: "SQL", isActive: false },
+  ]);
+
+  function handleActiveClick(name) {
+    setFilters((prev) =>
+      prev.map((filter) => {
+        return filter.filterName === name
+          ? { ...filter, isActive: !filter.isActive }
+          : filter;
+      })
+    );
+  }
+
+  function clearFilters() {
+    setTimeout(() => {
+      setFilters((prev) =>
+        prev.map((filter) => {
+          return { ...filter, isActive: false };
+        })
+      );
+    }, 100);
+  }
+
+  const getData = filters.some((filter) => filter.isActive === true)
+    ? data.filter((data) => {
+        const newFilters = filters.filter(
+          (filter) => filter.isActive
+        );
+
+        let newData = [];
+        newFilters.forEach((filter) => {
+          if (data.tools.includes(filter.filterName)) {
+            newData.push(data);
+          }
+        });
+        return newData.length > 0 ? newData : null;
+      })
+    : data;
+
   function seeMore() {
     if (appAmount >= data.length) {
       setAppAmount(8);
+      setIsSeeMore(true);
     } else {
       setAppAmount((prevAmount) => prevAmount + 8);
+      setIsSeeMore(appAmount + 8 >= data.length ? false : true);
     }
   }
 
-  const isSeeMore = appAmount >= data.length ? false : true;
+  const [isSeeMore, setIsSeeMore] = useState(
+    appAmount >= data.length ? false : true
+  );
 
-  const portElements = getData.map((project) => {
+  const portElements = getData.slice(0, appAmount).map((project) => {
     const { id, imgurl, title, tools } = project;
     return (
       <Link
@@ -65,10 +114,30 @@ export default function MyWorks() {
       <p className="section__subtitle section__subtitle--work">
         A selection of my range of work
       </p>
+      <div className="search_bar">
+        {filters.map((filter) => (
+          <span
+            key={filter.filterName}
+            onClick={() => handleActiveClick(filter.filterName)}
+            className={`tool ${filter.isActive ? "active" : ""}`}
+          >
+            {filter.filterName}
+          </span>
+        ))}
+        {filters.some((filter) => filter.isActive === true) && (
+          <div onClick={clearFilters} className="clearFilters">
+            <span>Clear</span>
+            <MdClear />
+          </div>
+        )}
+      </div>
       <div className="portfolio">{portElements}</div>
-      <button className="loadmore-btn" onClick={seeMore}>
-        {isSeeMore ? "See More" : "See Less"}
-      </button>
+
+      {getData.length - 8 > 0 && (
+        <button className="loadmore-btn" onClick={seeMore}>
+          {isSeeMore ? "See More" : "See Less"}
+        </button>
+      )}
     </section>
   );
 }

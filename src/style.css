@@ -570,7 +570,7 @@ abbr[title] {
   overflow: hidden;
 }
 
-.portfolio__item__tools .tool {
+.tool {
   background-color: #38378f;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
@@ -584,7 +584,6 @@ abbr[title] {
   display: flex;
   justify-content: center;
   align-items: center;
-  object-fit: cover;
   border-top: 3px solid #807ed8;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
 }
@@ -596,9 +595,9 @@ abbr[title] {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   object-fit: cover;
-  object-position: center;
+  object-position: top;
   -o-object-fit: cover;
-  -o-object-position: center;
+  -o-object-position: top;
   height: 100%;
   width: 100%;
   /* filter: brightness(0.9); */
@@ -647,6 +646,65 @@ abbr[title] {
   border-color: rgba(255, 255, 255, 0.4);
   color: rgba(255, 255, 255, 0.7);
 }
+
+
+.search_bar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search_bar .tool {
+  font-size: 1.125rem;
+  cursor: pointer;
+  outline: 1px solid transparent;
+}
+
+.search_bar .tool.active {
+  outline-color: rgb(136, 243, 225);
+  overflow: hidden;
+}
+
+
+.search_bar .tool:hover {
+  filter: brightness(1.25);
+}
+
+.search_bar .tool:active {
+  transform: scale(0.95);
+}
+
+.search_bar .tool.active:hover {
+  filter: brightness(0.8);
+}
+
+.clearFilters {
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  padding: 0 1rem;
+  margin-left: auto;
+  border: 1px solid rgb(223, 130, 130);
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: 0.125s linear;
+}
+
+.clearFilters:hover {
+  transform: skew(-5deg, 1deg);
+}
+
+.clearFilters:active {
+  transform: scale(0.95);
+}
+
 
 @media (max-width: 600px) {
   .portfolio__item__card {

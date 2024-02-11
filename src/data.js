@@ -6,6 +6,17 @@ function id() {
 export default [
   {
     id: id(),
+    title: "Versalo",
+    imgurl: "versalo.png",
+    link: "https://versalo.vercel.app/",
+    description:
+      "This web app is created for the final project of my Angular course. This is a car buying/selling service for users. It has features like authenticating with an activation link and recovering password features, uploading cars for selling, uploading images, automatically decreasing image size if it is large, having filters and so on. Every user can look through cars and if they have uploaded their cars to sell. ",
+    giturl:
+      "https://github.com/NikaEliashvili/Versalo-Angular-Project",
+    tools: "Angular & Firebase",
+  },
+  {
+    id: id(),
     title: "Social Services",
     imgurl: "social-services.png",
     link: "http://socialserviceproject.infinityfreeapp.com/",
@@ -92,7 +103,7 @@ export default [
     link: "https://quote-machine-app.netlify.app/",
     description: `this app is built by React. Here you can find random quotes about learning and share them on Twitter or Tumblr`,
     giturl: "https://github.com/NikaEliashvili/quote-machine",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -101,7 +112,7 @@ export default [
     link: "https://pomodoro-clock-byreact.netlify.app/",
     description: `This is Pomodoro Clock, which allows users to use their time better. Main idea is that you can turn on timer and control it. It is built by ReactJS.`,
     giturl: "https://github.com/NikaEliashvili/pomodoro-clock",
-    tools: "TypeScript, React & TailWind",
+    tools: "ReactTS & TailWind",
   },
   {
     id: id(),
@@ -110,7 +121,7 @@ export default [
     link: "https://pokemon-react-ts.netlify.app/",
     description: `This App is simple Pokemon app where you can find pokemons and user searchbar for better experience. It is built using React-TS and tailwind. Here is showcase of using React hooks suck as useEffect, useMemo, useRef, useCallback and others.`,
     giturl: "https://github.com/NikaEliashvili/Pokemon",
-    tools: "TypeScript, React & TailWind",
+    tools: "ReactTS & TailWind",
   },
   {
     id: id(),
@@ -119,7 +130,7 @@ export default [
     link: "https://markdown-editor-previewer.netlify.app/",
     description: `It is a React project. here you can type any text and transform them in specific styles. make them bold, italic and other unique styles.`,
     giturl: "https://github.com/NikaEliashvili/markdown-previewer",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -129,7 +140,7 @@ export default [
     description:
       "It is a very basic game for children. The main goal is to roll ten dice of the same number as fast as you can. My app saves users' track rolls and time, so users can improve their dashboards. I have used ReactJS to build this app. It was built as a part of Scrimba's Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Tenzies-Game",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -139,7 +150,7 @@ export default [
     description:
       "Nowadays, memes are extremely popular. So, I built this app where you can get a random meme and write whatever you want on this meme. I have used React and API. It was built as a part of Scrimba's Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/meme-generator",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -149,7 +160,7 @@ export default [
     description:
       "This is the main layout of an AirBnb clone. It is built using vanilla CSS and is utilizing Flexbox, CSS Grid, and CSS Variables. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/AirBnb-Clone",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -159,7 +170,7 @@ export default [
     description:
       "This is a small journal where you can look through places where the user was. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Travel-Journal",
-    tools: "React & CSS",
+    tools: "ReactJS & CSS",
   },
   {
     id: id(),
@@ -169,7 +180,7 @@ export default [
     description:
       "This is the main layout for the restaurant order app. This app is built using HTML, vanilla CSS and vanilla JS. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Restaurant-Menu",
-    tools: "Vanilla JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -179,7 +190,7 @@ export default [
     description:
       "In this app, user can save their to-do list. This app is built in vanilla JS with Firebase, so all that is saved is not lost. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Listify",
-    tools: "JS & Firebase",
+    tools: "VanillaJS & Firebase",
   },
   {
     id: id(),
@@ -189,7 +200,7 @@ export default [
     description:
       "Here you can see any movies and save them into a watchlist. This app uses API to fetch movies. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/movie-watchlist",
-    tools: "Vanilla JS & API",
+    tools: "VanillaJS & API",
   },
   {
     id: id(),
@@ -199,7 +210,7 @@ export default [
     description:
       "It is a small flappy bird game. Built with HTML, CSS and JavaScript. Keep in mind this is not responsive for mobile phones. ",
     giturl: "https://github.com/NikaEliashvili/Flappy-Bird",
-    tools: "Vanilla JS",
+    tools: "VanillaJS && CSS",
   },
   {
     id: id(),
@@ -209,7 +220,7 @@ export default [
     description:
       "It is my one of the first project with JS. This app generates random passwords. So, a user can have a unique password for their accounts. I used vanilla JavaScript and CSS. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Generator",
-    tools: "Vanilla JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -219,7 +230,7 @@ export default [
     description:
       "It was built as a part of Scrimba's Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/BBQ-master",
-    tools: "Vanilla JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -229,7 +240,7 @@ export default [
     description:
       "A little game with cards. it uses vanilla JS. It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/War-By-Cards",
-    tools: "Vanilla JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -239,7 +250,7 @@ export default [
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Learning-Journal",
-    tools: "Vanilla JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -249,7 +260,7 @@ export default [
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Postify",
-    tools: "JS & CSS",
+    tools: "VanillaJS & CSS",
   },
   {
     id: id(),
@@ -279,7 +290,7 @@ export default [
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/ShadeTown-ES6-",
-    tools: "JS(ES6) & CSS",
+    tools: "VanillaJS(ES6) & CSS",
   },
   {
     id: id(),
@@ -289,7 +300,7 @@ export default [
     description:
       "It was built as a part of the Scrimba Frontend Developer Career Path.",
     giturl: "https://github.com/NikaEliashvili/Google-Extension",
-    tools: "vanilla JS",
+    tools: "vanillaJS",
   },
   // {
   //   id: id(),
@@ -309,6 +320,6 @@ export default [
     description:
       "It is my very first JavaScript app. This app can help you to count people on the station or do any counting work. It was built as a part of the Scrimba Frontend Developer Career Path. ",
     giturl: "https://github.com/NikaEliashvili/Increment-App",
-    tools: "vanilla JS",
+    tools: "vanillaJS",
   },
 ];
