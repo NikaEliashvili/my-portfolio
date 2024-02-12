@@ -78,6 +78,7 @@ export default function MyWorks() {
         to={`${id}`}
         id={`work-${id}`}
         state={{ appAmount }}
+        className="card-link"
       >
         <dfn>
           <abbr title="Click to see more...">

@@ -47,7 +47,6 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
   overflow-x: hidden;
-  ;
 }
 
 #root {
@@ -516,9 +515,13 @@ header {
   font-weight: 300;
 }
 
+.card-link {
+  width: fit-content;
+}
+
 .portfolio__item__card {
-  margin: 0 auto;
-  max-width: 400px;
+  /* margin: 0 auto; */
+  max-width: 280px;
   background: #303030;
   border-radius: 0.5rem;
   height: 320px;
