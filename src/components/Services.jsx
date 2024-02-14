@@ -11,13 +11,13 @@ export default function Services() {
           <h3>Development</h3>
           <p>
             Welcome to the forefront of innovation! With mastery in
-            ReactJS, AngularJS, TailwindCSS, Bootstrap, AntDesign,
-            Google Firebase, and more, I craft seamless digital
-            experiences. From sleek websites to dynamic web
-            applications, I transform visions into reality. Elevate
-            your online presence with cutting-edge design, flawless
-            functionality, and unparalleled user experiences. Let's
-            build your digital future together.
+            React, Angular, TailwindCSS, Bootstrap, AntDesign, Google
+            Firebase, and more, I craft seamless digital experiences.
+            From sleek websites to dynamic web applications, I
+            transform visions into reality. Elevate your online
+            presence with cutting-edge design, flawless functionality,
+            and unparalleled user experiences. Let's build your
+            digital future together.
           </p>
         </div>
         <div className="service">

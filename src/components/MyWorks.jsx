@@ -2,16 +2,18 @@ import React, { useId, useState } from "react";
 import { MdClear } from "react-icons/md";
 import data from "../data.js";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function MyWorks() {
   const location = useLocation();
+  const navigate = useNavigate();
   const stateAppAmount = location?.state?.appAmount;
   const [appAmount, setAppAmount] = React.useState(
     stateAppAmount || 8
   );
 
   const [filters, setFilters] = useState([
+    { filterName: "NextJS", isActive: false },
     { filterName: "React", isActive: false },
     { filterName: "Angular", isActive: false },
     { filterName: "VanillaJS", isActive: false },
@@ -70,40 +72,40 @@ export default function MyWorks() {
     appAmount >= data.length ? false : true
   );
 
+  function navigation(id, state) {
+    navigate(`${id}`, { state });
+  }
+
   const portElements = getData.slice(0, appAmount).map((project) => {
     const { id, imgurl, title, tools } = project;
     return (
-      <Link
-        key={id}
-        to={`${id}`}
-        id={`work-${id}`}
-        state={{ appAmount }}
+      <abbr
         className="card-link"
+        key={id}
+        title="Click to see more..."
       >
-        <dfn>
-          <abbr title="Click to see more...">
-            <div className="portfolio__item__card">
-              <div className="portfolio__item__header__container">
-                <h3 className="portfolio__item__header">{title}</h3>
-                <div className="portfolio__item__tools">
-                  {tools.split("&").map((skill) => (
-                    <span key={skill} className="tool">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div key={id} className="portfolio__item">
-                <img
-                  src={`/images/${imgurl}`}
-                  alt={title}
-                  className="portfolio__img"
-                />
+        <Link to={`${id}`} id={`work-${id}`} state={{ appAmount }}>
+          <div className="portfolio__item__card">
+            <div className="portfolio__item__header__container">
+              <h3 className="portfolio__item__header">{title}</h3>
+              <div className="portfolio__item__tools">
+                {tools.split("&").map((skill) => (
+                  <span key={skill} className="tool">
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
-          </abbr>
-        </dfn>
-      </Link>
+            <div key={id} className="portfolio__item">
+              <img
+                src={`/images/${imgurl}`}
+                alt={title}
+                className="portfolio__img"
+              />
+            </div>
+          </div>
+        </Link>
+      </abbr>
     );
   });
 

@@ -17,7 +17,7 @@ export default function About() {
           are delightful to use. My specialities in frontend
           development include
           <strong>
-            JavaScript(ES6+), ReactJS, Angular, Ant Design,
+            TypeScript, JavaScript(ES6+), React, Angular, Ant Design,
             TailwindCSS, PHP, MySql.
           </strong>
         </p>

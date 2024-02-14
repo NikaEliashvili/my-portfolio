@@ -515,13 +515,10 @@ header {
   font-weight: 300;
 }
 
-.card-link {
-  width: fit-content;
-}
+
 
 .portfolio__item__card {
-  /* margin: 0 auto; */
-  max-width: 280px;
+  width: 100%;
   background: #303030;
   border-radius: 0.5rem;
   height: 320px;
@@ -583,6 +580,8 @@ abbr[title] {
 
 
 .portfolio__item {
+  width: 100%;
+  height: 100%;
   background: #1a1a1a;
   overflow: hidden;
   animation: popup-anim 0.5s ease-out 0s alternate 1;
@@ -633,6 +632,7 @@ abbr[title] {
 
 .loadmore-btn {
   width: 100%;
+  max-width: 1200px;
   border-radius: 0.3rem;
   padding: 0.8rem;
   margin-top: 2rem;
@@ -716,6 +716,7 @@ abbr[title] {
 @media (max-width: 600px) {
   .portfolio__item__card {
     height: 400px;
+    width: 100%;
   }
 
   .section__title {
