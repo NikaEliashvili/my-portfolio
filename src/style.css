@@ -515,7 +515,9 @@ header {
   font-weight: 300;
 }
 
-
+.card-link {
+  max-width: 350px;
+}
 
 .portfolio__item__card {
   width: 100%;
