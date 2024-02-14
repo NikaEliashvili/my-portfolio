@@ -716,6 +716,18 @@ abbr[title] {
 
 
 @media (max-width: 600px) {
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-link {
+    min-width: 350px;
+  }
+
   .portfolio__item__card {
     height: 400px;
     width: 100%;
@@ -738,6 +750,10 @@ abbr[title] {
     text-align: left;
     margin: 1rem 0 2rem;
     text-align: center;
+  }
+
+  .card-link {
+    min-width: 250px;
   }
 
 }
