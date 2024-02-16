@@ -363,7 +363,7 @@ header {
 
 .my-services {
   background-color: var(--color-dark);
-  background-image: url('../images/services-bg7-min.jpg');
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2Fservices-bg7-min.jpg?alt=media&token=dc6dc943-1fcb-40b6-9fdb-c35b2b81cc80');
   background-size: cover;
   color: whitesmoke;
   text-align: center;
@@ -479,6 +479,17 @@ header {
 
 /* My Work */
 
+
+
+.spinner {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 .my-work {
   background-color: rgba(24, 24, 24, 0.8);
   color: white;
@@ -493,7 +504,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/services-bg6-min.jpg');
+  background: url('https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2Fservices-bg6-min.jpg?alt=media&token=6221c6f3-666e-45e0-a211-554f5404d553'), rgb(29, 29, 29);
   background-position: center;
   background-size: cover;
   opacity: 1;
@@ -886,13 +897,15 @@ abbr[title] {
 
 @keyframes popup-anim {
   from {
-    opacity: 0.4;
-    transform: scale(0) translateX(-50rem) rotate(90deg);
+    z-index: -1;
+    transform: scale(0.4) translateY(-3rem) rotate(20deg);
+    opacity: 0;
   }
 
   to {
     opacity: 1;
-    transform: scale(1) translateX(0);
+    z-index: -1;
+    transform: scale(1) translateY(0);
   }
 }
 

@@ -1,5 +1,4 @@
 import React from "react";
-import myImg from "/images/me.jpg";
 export default function About() {
   return (
     <section className="about-me" id="about">
@@ -36,7 +35,11 @@ export default function About() {
         </p>
       </div>
 
-      <img src={myImg} alt="" className="about-me__img" />
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2Fme.jpg?alt=media&token=f83bd202-c70f-4145-bc7a-417470f76c30"
+        alt=""
+        className="about-me__img"
+      />
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MainPage from "./pages/MainPage";
 import EachWork from "./pages/EachWork";
 import Layout from "./components/Layout";

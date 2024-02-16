@@ -1,5 +1,4 @@
 import React from "react";
-import myPhoto from "/images/myPhoto-min.jpg";
 export default function Introduction() {
   return (
     <section className="intro" id="home">
@@ -10,7 +9,7 @@ export default function Introduction() {
         Front-End Developer
       </p>
       <img
-        src={myPhoto}
+        src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2Fme.jpg?alt=media&token=f83bd202-c70f-4145-bc7a-417470f76c30"
         alt="a picture of Jane Smith smiling"
         className="intro__img"
       />

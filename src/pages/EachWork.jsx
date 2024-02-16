@@ -1,19 +1,35 @@
-import React from "react";
-import { Link, useParams, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { FaGithub, FaEye } from "react-icons/fa6";
 import ScrollUp from "../components/ScrollUp";
+import { projectById } from "../../firebase";
+import { TailSpin } from "react-loader-spinner";
 
-import data from "../data";
 export default function EachWork() {
   const params = useParams();
   const appId = parseInt(params.id);
-  const app = data.filter((app) => app.id === appId);
-  const { id, title, imgurl, link, description, giturl, tools } =
-    app[0];
+  const [app, setApp] = useState({
+    description: null,
+    giturl: null,
+    id: null,
+    imgurl: null,
+    link: null,
+    title: null,
+    tools: null,
+  });
+
+  useEffect(() => {
+    projectById(appId).then((project) => {
+      setApp(project);
+    });
+  }, []);
+
+  const { id, title, imgurl, link, description, giturl, tools } = app;
+
   const location = useLocation();
   const appAmount = location?.state?.appAmount;
-  return (
+  return id ? (
     <>
       <HashLink
         to={`..#work-${id}`}
@@ -31,11 +47,7 @@ export default function EachWork() {
           {tools}
         </p>
 
-        <img
-          src={`/images/${imgurl}`}
-          alt=""
-          className="intro__img"
-        />
+        <img src={imgurl} alt="" className="intro__img" />
       </section>
       <div className="portfolio-item-individual">
         <div>
@@ -53,5 +65,14 @@ export default function EachWork() {
       </div>
       <ScrollUp />
     </>
+  ) : (
+    <div className="spinner">
+      <TailSpin
+        color="#c0bebe"
+        height={70}
+        strokeWidth={3}
+        radius={"0px"}
+      />
+    </div>
   );
 }

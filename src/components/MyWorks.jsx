@@ -1,16 +1,21 @@
-import React, { useId, useState } from "react";
+import React, { useEffect, useId, useState } from "react";
 import { MdClear } from "react-icons/md";
-import data from "../data.js";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import dataFB from "../../firebase.js";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 export default function MyWorks() {
   const location = useLocation();
-  const navigate = useNavigate();
+  const [data, setData] = useState(null);
+
   const stateAppAmount = location?.state?.appAmount;
   const [appAmount, setAppAmount] = React.useState(
     stateAppAmount || 8
   );
+
+  const skeletonArr = Array(8).fill();
 
   const [filters, setFilters] = useState([
     { filterName: "NextJS", isActive: false },
@@ -21,6 +26,12 @@ export default function MyWorks() {
     { filterName: "PHP", isActive: false },
     { filterName: "SQL", isActive: false },
   ]);
+
+  useEffect(() => {
+    dataFB?.then((res) => {
+      setData(res);
+    });
+  }, []);
 
   function handleActiveClick(name) {
     setFilters((prev) =>
@@ -42,72 +53,93 @@ export default function MyWorks() {
     }, 100);
   }
 
-  const getData = filters.some((filter) => filter.isActive === true)
-    ? data.filter((data) => {
-        const newFilters = filters.filter(
-          (filter) => filter.isActive
-        );
+  const getData =
+    data?.length > 0
+      ? filters.some((filter) => filter.isActive === true)
+        ? data?.filter((data) => {
+            const newFilters = filters.filter(
+              (filter) => filter.isActive
+            );
 
-        let newData = [];
-        newFilters.forEach((filter) => {
-          if (data.tools.includes(filter.filterName)) {
-            newData.push(data);
-          }
-        });
-        return newData.length > 0 ? newData : null;
-      })
-    : data;
+            let newData = [];
+            newFilters.forEach((filter) => {
+              if (data.tools.includes(filter.filterName)) {
+                newData.push(data);
+              }
+            });
+            return newData.length > 0 ? newData : null;
+          })
+        : data
+      : null;
 
   function seeMore() {
-    if (appAmount >= data.length) {
+    if (appAmount >= data?.length) {
       setAppAmount(8);
       setIsSeeMore(true);
     } else {
       setAppAmount((prevAmount) => prevAmount + 8);
-      setIsSeeMore(appAmount + 8 >= data.length ? false : true);
+      setIsSeeMore(appAmount + 8 >= data?.length ? false : true);
     }
   }
 
   const [isSeeMore, setIsSeeMore] = useState(
-    appAmount >= data.length ? false : true
+    appAmount >= data?.length ? false : true
   );
 
-  function navigation(id, state) {
-    navigate(`${id}`, { state });
-  }
-
-  const portElements = getData.slice(0, appAmount).map((project) => {
-    const { id, imgurl, title, tools } = project;
-    return (
-      <abbr
-        className="card-link"
-        key={id}
-        title="Click to see more..."
-      >
-        <Link to={`${id}`} id={`work-${id}`} state={{ appAmount }}>
-          <div className="portfolio__item__card">
-            <div className="portfolio__item__header__container">
-              <h3 className="portfolio__item__header">{title}</h3>
-              <div className="portfolio__item__tools">
-                {tools.split("&").map((skill) => (
-                  <span key={skill} className="tool">
-                    {skill}
-                  </span>
-                ))}
+  const portElements = getData
+    ? getData?.slice(0, appAmount)?.map((project) => {
+        const { id, imgurl, title, tools } = project;
+        return (
+          <abbr
+            className="card-link"
+            key={id}
+            title="Click to see more..."
+          >
+            <Link
+              to={`${id}`}
+              id={`work-${id}`}
+              state={{ appAmount }}
+            >
+              <div className="portfolio__item__card">
+                <div className="portfolio__item__header__container">
+                  <h3 className="portfolio__item__header">{title}</h3>
+                  <div className="portfolio__item__tools">
+                    {tools.split("&").map((skill) => (
+                      <span key={skill} className="tool">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="portfolio__item">
+                  <img
+                    loading="eager"
+                    src={imgurl}
+                    alt={title}
+                    className="portfolio__img"
+                  />
+                </div>
               </div>
-            </div>
-            <div key={id} className="portfolio__item">
-              <img
-                src={`/images/${imgurl}`}
-                alt={title}
-                className="portfolio__img"
-              />
-            </div>
-          </div>
-        </Link>
-      </abbr>
-    );
-  });
+            </Link>
+          </abbr>
+        );
+      })
+    : skeletonArr.map((_, i) => (
+        <SkeletonTheme
+          key={i}
+          baseColor="#303030"
+          highlightColor="#323232"
+        >
+          <Skeleton
+            count={1}
+            borderRadius={10}
+            direction="ltr"
+            duration={1.25}
+            height={300}
+            width={250}
+          />
+        </SkeletonTheme>
+      ));
 
   return (
     <section key={useId()} className="my-work" id="work">
@@ -136,7 +168,7 @@ export default function MyWorks() {
       </div>
       <div className="portfolio">{portElements}</div>
 
-      {getData.length - 8 > 0 && (
+      {getData?.length - 8 > 0 && (
         <button className="loadmore-btn" onClick={seeMore}>
           {isSeeMore ? "See More" : "See Less"}
         </button>
