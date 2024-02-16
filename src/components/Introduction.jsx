@@ -9,7 +9,7 @@ export default function Introduction() {
         Front-End Developer
       </p>
       <img
-        src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2Fme.jpg?alt=media&token=f83bd202-c70f-4145-bc7a-417470f76c30"
+        src="https://firebasestorage.googleapis.com/v0/b/my-portfolio-f4bf7.appspot.com/o/Images%2FmyPhoto-min.jpg?alt=media&token=6e5c928a-20df-4355-85b2-42c9af72ccb5"
         alt="a picture of Jane Smith smiling"
         className="intro__img"
       />
