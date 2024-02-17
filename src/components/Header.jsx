@@ -31,13 +31,13 @@ export default function Header() {
 
   function closeNavbar() {
     setMenuOn(false);
+    setIsClickedBtn(false);
   }
 
   return (
     <header>
       <div className="logo">
         <HashLink to="/">Nika</HashLink>
-        {/* <img src={reactLogo} alt="" /> */}
       </div>
       {windowWidth <= 650 ? (
         <button className="header-btn" onClick={menuShow}>
@@ -48,7 +48,7 @@ export default function Header() {
         <nav className="nav">
           <ul className={`nav__list`}>
             <li className="nav__item">
-              <HashLink to="/" className="nav__link">
+              <HashLink to="/#" className="nav__link">
                 Home
               </HashLink>
             </li>
@@ -76,7 +76,7 @@ export default function Header() {
               <li className="nav__item">
                 <HashLink
                   onClick={closeNavbar}
-                  to="/"
+                  to="/#"
                   className="nav__link"
                 >
                   Home

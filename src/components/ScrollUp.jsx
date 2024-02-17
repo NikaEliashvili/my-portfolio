@@ -1,5 +1,6 @@
 import React from "react";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { HashLink } from "react-router-hash-link";
 
 export default function ScrollUp() {
   const [winHeight, setWinHeight] = React.useState(window.scrollY);
@@ -12,20 +13,17 @@ export default function ScrollUp() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  function scrollUp() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+
   if (winHeight - window.innerHeight >= window.innerHeight - 800) {
     isScroll = true;
   } else {
     isScroll = false;
   }
   return (
-    <div className="scroll-up" onClick={scrollUp}>
-      {isScroll && <BsFillArrowUpCircleFill className="upicon" />}{" "}
-    </div>
+    <HashLink to="/#">
+      <div className="scroll-up">
+        {isScroll && <BsFillArrowUpCircleFill className="upicon" />}{" "}
+      </div>
+    </HashLink>
   );
 }
