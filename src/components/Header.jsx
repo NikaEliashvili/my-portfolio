@@ -28,6 +28,11 @@ export default function Header() {
       window.removeEventListener("resize", watchWidth);
     };
   }, []);
+
+  function closeNavbar() {
+    setMenuOn(false);
+  }
+
   return (
     <header>
       <div className="logo">
@@ -69,22 +74,38 @@ export default function Header() {
           <nav className="nav onClick">
             <ul className={`nav__list onClick`}>
               <li className="nav__item">
-                <HashLink to="/" className="nav__link">
+                <HashLink
+                  onClick={closeNavbar}
+                  to="/"
+                  className="nav__link"
+                >
                   Home
                 </HashLink>
               </li>
               <li className="nav__item">
-                <HashLink to="/#services" className="nav__link">
+                <HashLink
+                  onClick={closeNavbar}
+                  to="/#services"
+                  className="nav__link"
+                >
                   Services
                 </HashLink>
               </li>
               <li className="nav__item">
-                <HashLink to="/#about" className="nav__link">
+                <HashLink
+                  onClick={closeNavbar}
+                  to="/#about"
+                  className="nav__link"
+                >
                   About
                 </HashLink>
               </li>
               <li className="nav__item">
-                <HashLink to="#work" className="nav__link">
+                <HashLink
+                  onClick={closeNavbar}
+                  to="#work"
+                  className="nav__link"
+                >
                   Projects
                 </HashLink>
               </li>
