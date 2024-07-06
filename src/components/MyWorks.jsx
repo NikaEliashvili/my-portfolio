@@ -18,13 +18,10 @@ export default function MyWorks() {
   const skeletonArr = Array(8).fill();
 
   const [filters, setFilters] = useState([
-    { filterName: "NextJS", isActive: false },
     { filterName: "React", isActive: false },
     { filterName: "Angular", isActive: false },
     { filterName: "VanillaJS", isActive: false },
     { filterName: "Firebase", isActive: false },
-    { filterName: "PHP", isActive: false },
-    { filterName: "SQL", isActive: false },
   ]);
 
   useEffect(() => {
@@ -166,6 +163,16 @@ export default function MyWorks() {
           </div>
         )}
       </div>
+      <p>
+        All Projects on my{" "}
+        <a
+          href="https://github.com/NikaEliashvili"
+          style={{ textDecoration: "underline" }}
+          target="_blank"
+        >
+          GitHub
+        </a>
+      </p>
       <div className="portfolio">{portElements}</div>
 
       {getData?.length - 8 > 0 && (

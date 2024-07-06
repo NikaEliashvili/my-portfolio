@@ -17,7 +17,7 @@ export default function About() {
           development include
           <strong>
             TypeScript, JavaScript(ES6+), React, Angular, Ant Design,
-            TailwindCSS, PHP, MySql.
+            TailwindCSS, Angular Materials, Redux, Zustand.
           </strong>
         </p>
         <p>
