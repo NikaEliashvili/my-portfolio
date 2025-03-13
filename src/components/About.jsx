@@ -13,8 +13,7 @@ export default function About() {
         <p>
          I'm a front-end developer based in Tbilisi, Georgia. I
           love building apps that solve real-world problems 
-          and are delightful to use. 
-          <br /> My specialities in front-end development include
+          and are delightful to use. My specialities in front-end development include
           <strong>
             {" "}NextJS, ReactJS, Angular, SSR(server-side rendering), TypeScript, JavaScript(ES6+), Ant Design, TailwindCSS, Redux, Zustand, Redux, Redux Toolkit, React Hook Form, Formik, and many other libraries.
           </strong>
