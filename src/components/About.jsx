@@ -11,13 +11,12 @@ export default function About() {
 
       <div className="about-me__body">
         <p>
-          I'm a Frontend developer based out of Tbilisi, Georgia. I
-          love building apps that solve real-world problems, and that
-          are delightful to use. My specialities in frontend
-          development include
+         I'm a front-end developer based in Tbilisi, Georgia. I
+          love building apps that solve real-world problems 
+          and are delightful to use. 
+          <br /> My specialities in front-end development include
           <strong>
-            TypeScript, JavaScript(ES6+), React, Angular, Ant Design,
-            TailwindCSS, Angular Materials, Redux, Zustand.
+            {" "}NextJS, ReactJS, Angular, SSR(server-side rendering), TypeScript, JavaScript(ES6+), Ant Design, TailwindCSS, Redux, Zustand, Redux, Redux Toolkit, React Hook Form, Formik, and many other libraries.
           </strong>
         </p>
         <p>
